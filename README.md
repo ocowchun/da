@@ -1,9 +1,27 @@
 inspired by [doing](http://brettterpstra.com/projects/doing/).
 
-##feature
+##todo
+###add new thing
+```sh
+$ da now XXXX
+```
 
-da now XXXX
-da done
+###complete last thing
+```sh
+$ da done
+```
+
+###show last thing
+```sh
 da last
-da today
-da init 設定config
+```
+
+###show today things
+```
+$ da today
+```
+
+###init config
+```
+$ da init 
+```
