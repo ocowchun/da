@@ -16,7 +16,10 @@ program
 	.command('now <thing>')
 	.description('run remote setup commands')
 	.action(function(thing) {
-		Thing.create(thing);
+		Thing.create(thing, function(content) {
+			var result = render.renderCreateThing(content);
+			console.log(result);
+		});
 	});
 
 program

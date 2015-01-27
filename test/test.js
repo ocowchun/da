@@ -24,7 +24,16 @@ describe('render', function() {
 				update_at: null
 			}];
 			var actual = render.renderTodayThings(things);
-			var expect = '14:45:29 GMT+0800 (CST) | eat\n14:45:29 GMT+0800 (CST) | sleep\n14:45:29 GMT+0800 (CST) | coding';
+			var expect = '14:45:29 | eat\n14:45:29 | sleep\n14:45:29 | coding';
+			assert.equal(expect, actual);
+		});
+	});
+
+	describe('#renderCreateThing()', function() {
+		it('should return thing with correct style', function() {
+			var content = 'sleep';
+			var actual = render.renderCreateThing(content);
+			var expect = 'create thing: sleep';
 			assert.equal(expect, actual);
 		});
 	});
