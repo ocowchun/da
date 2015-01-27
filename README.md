@@ -1,14 +1,9 @@
 inspired by [doing](http://brettterpstra.com/projects/doing/).
 
-##todo
+##complete
 ###add new thing
 ```sh
 $ da now XXXX
-```
-
-###complete last thing
-```sh
-$ da done
 ```
 
 ###show last thing
@@ -21,7 +16,14 @@ da last
 $ da today
 ```
 
+##todo
+
 ###init config
 ```
 $ da init 
+```
+
+###complete last thing
+```sh
+$ da done
 ```

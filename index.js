@@ -33,4 +33,14 @@ program
 	});
 
 
+program
+	.command('last')
+	.description('show last thing')
+	.action(function() {
+		Thing.getLast(function(thing) {
+			var result = render.renderLastThing(thing);
+			console.log(result);
+		});
+	});
+
 program.parse(process.argv);
