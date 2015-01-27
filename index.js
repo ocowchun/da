@@ -35,16 +35,3 @@ program
 	});
 
 program.parse(process.argv);
-
-function writeFile() {
-	var fileName = "";
-	var result = "";
-	fs.writeFile(fileName, result, function(err) {
-		if (err) {
-			console.log("ERROR:")
-			console.log(err);
-		} else {
-			console.log("The file was saved!");
-		}
-	});
-}
