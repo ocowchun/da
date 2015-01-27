@@ -6,7 +6,7 @@
 
 
 var program = require('commander');
-
+var Thing = require('./lib/thing');
 program
 	.version('0.0.1')
 	.option('-p, --peppers', 'Add peppers')
@@ -31,7 +31,16 @@ program
 	.command('now <thing>')
 	.description('run remote setup commands')
 	.action(function(thing) {
-		console.log(thing);
+		Thing.create(thing);
 	});
+
+program
+	.command('today')
+	.description('list things happen today')
+	.action(function() {
+		console.log("things");
+		Thing.create(thing);
+	});
+
 
 program.parse(process.argv);
