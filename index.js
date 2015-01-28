@@ -17,13 +17,14 @@ program
 	.command('now <thing>')
 	.description('run remote setup commands')
 	.action(function(thing) {
+		if (process.argv.length !== 4) {
+			// when user type da now eat apple
+			// [ 'node', '/usr/local/bin/da', 'now', 'eat', 'apple' ]
+			var args = process.argv;
+			thing = args.slice(3, args.length).join(' ')
+		}
+		
 		Thing.create(thing, function(content) {
-			if (process.argv.length !== 4) {
-				// when user type da now eat apple
-				// [ 'node', '/usr/local/bin/da', 'now', 'eat', 'apple' ]
-				var args = process.argv;
-				content = args.slice(3, args.length).join(' ')
-			}
 			var result = render.renderCreateThing(content);
 			console.log(result);
 		});
