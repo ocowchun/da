@@ -8,9 +8,10 @@
 var program = require('commander');
 var Thing = require('./lib/thing');
 var render = require('./lib/render');
+var init = require('./lib/init');
+
 program
 	.version('0.0.1')
-
 
 program
 	.command('now <thing>')
@@ -38,7 +39,6 @@ program
 		});
 	});
 
-
 program
 	.command('last')
 	.description('show last thing')
@@ -47,6 +47,16 @@ program
 			var result = render.renderLastThing(thing);
 			console.log(result);
 		});
+	});
+
+program
+	.command('init')
+	.description('initialize da config')
+	.action(function() {
+		init(function() {
+			console.log("success init");
+		});
+
 	});
 
 program.parse(process.argv);
