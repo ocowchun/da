@@ -1,6 +1,12 @@
 inspired by [doing](http://brettterpstra.com/projects/doing/).
 
 ##complete
+
+###init config
+```
+$ da init 
+```
+
 ###add new thing
 ```sh
 $ da now XXXX
@@ -17,11 +23,6 @@ $ da today
 ```
 
 ##todo
-
-###init config
-```
-$ da init 
-```
 
 ###complete last thing
 ```sh
